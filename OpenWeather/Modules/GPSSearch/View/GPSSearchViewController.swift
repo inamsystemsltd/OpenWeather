@@ -71,6 +71,6 @@ extension GPSSearchViewController:UITableViewDelegate, UITableViewDataSource{
     }
     
     func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return sectionsRowModels[section].title
+        return sectionsRowModels[section].title.getDayFromDateString()
     }
 }
