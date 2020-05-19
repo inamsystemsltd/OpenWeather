@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Wrf-1E-jJW">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Dashboard View Controller-->
+        <scene sceneID="SbF-7Z-xXh">
+            <objects>
+                <viewController storyboardIdentifier="DashboardViewController" id="BZO-RZ-Lp6" customClass="DashboardViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJJ-0O-gcw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Forecast" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3fz-n8-FGF">
+                                <rect key="frame" x="10" y="100" width="355" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9W3-M7-b3A">
+                                <rect key="frame" x="86" y="286.5" width="203" height="94"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JtT-n7-qdk">
+                                        <rect key="frame" x="0.0" y="0.0" width="203" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="   Search via city names" image="city">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchByCitiesTapped:" destination="BZO-RZ-Lp6" eventType="touchUpInside" id="a3J-HJ-EHx"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="leading" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UbS-vk-fs1">
+                                        <rect key="frame" x="0.0" y="62" width="203" height="32"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                        <state key="normal" title="   Search via GPS" image="gps">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="searchByGPSTapped:" destination="BZO-RZ-Lp6" eventType="touchUpInside" id="sO4-4X-wyF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="JtT-n7-qdk" secondAttribute="trailing" id="4SJ-Mh-Ptu"/>
+                                    <constraint firstItem="UbS-vk-fs1" firstAttribute="leading" secondItem="9W3-M7-b3A" secondAttribute="leading" id="6Q7-5u-OQ4"/>
+                                    <constraint firstItem="UbS-vk-fs1" firstAttribute="top" secondItem="JtT-n7-qdk" secondAttribute="bottom" constant="30" id="H0Z-ld-kAX"/>
+                                    <constraint firstItem="JtT-n7-qdk" firstAttribute="leading" secondItem="9W3-M7-b3A" secondAttribute="leading" id="QW6-jq-zqh"/>
+                                    <constraint firstAttribute="bottom" secondItem="UbS-vk-fs1" secondAttribute="bottom" id="fNg-Bj-lWg"/>
+                                    <constraint firstAttribute="trailing" secondItem="UbS-vk-fs1" secondAttribute="trailing" id="hkZ-p1-Ror"/>
+                                    <constraint firstItem="JtT-n7-qdk" firstAttribute="top" secondItem="9W3-M7-b3A" secondAttribute="top" id="sIl-ak-lc7"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9W3-M7-b3A" firstAttribute="centerY" secondItem="ZJJ-0O-gcw" secondAttribute="centerY" id="C5T-ny-ucf"/>
+                            <constraint firstItem="9W3-M7-b3A" firstAttribute="centerX" secondItem="ZJJ-0O-gcw" secondAttribute="centerX" id="JIL-3w-3jk"/>
+                            <constraint firstItem="3fz-n8-FGF" firstAttribute="top" secondItem="RsR-Wb-zLG" secondAttribute="top" constant="100" id="bdp-13-Daq"/>
+                            <constraint firstItem="RsR-Wb-zLG" firstAttribute="trailing" secondItem="3fz-n8-FGF" secondAttribute="trailing" constant="10" id="e04-Kt-AZs"/>
+                            <constraint firstItem="3fz-n8-FGF" firstAttribute="leading" secondItem="RsR-Wb-zLG" secondAttribute="leading" constant="10" id="mMu-uZ-g91"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RsR-Wb-zLG"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="RA6-cs-AWc"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ama-h5-f0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="448.80000000000001" y="-188.45577211394306"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="k1x-9o-Kl7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Wrf-1E-jJW" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="uHb-JZ-0Dp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BZO-RZ-Lp6" kind="relationship" relationship="rootViewController" id="37a-a5-XAE"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BMx-Cd-VKX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490.39999999999998" y="-188.45577211394306"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="city" width="32" height="32"/>
+        <image name="gps" width="32" height="32"/>
+    </resources>
+</document>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--City Search View Controller-->
+        <scene sceneID="SbF-7Z-xXh">
+            <objects>
+                <viewController storyboardIdentifier="CitySearchViewController" id="BZO-RZ-Lp6" customClass="CitySearchViewController" customModule="OpenWeather" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="ZJJ-0O-gcw">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" placeholder="Enter city names" translatesAutoresizingMaskIntoConstraints="NO" id="a1b-7h-PTg">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="BZO-RZ-Lp6" id="m2k-j1-gnq"/>
+                                </connections>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gWd-wS-EYq">
+                                <rect key="frame" x="0.0" y="98.5" width="375" height="568.5"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BZO-RZ-Lp6" id="6ga-kH-t4x"/>
+                                    <outlet property="delegate" destination="BZO-RZ-Lp6" id="mwa-to-DM8"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Type comma separated city names to get their weather info *Minimum 3 &amp; Maximum 7 cities*" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I01-7G-RLD">
+                                <rect key="frame" x="8" y="64" width="359" height="26.5"/>
+                                <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="11"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="RsR-Wb-zLG" firstAttribute="trailing" secondItem="I01-7G-RLD" secondAttribute="trailing" constant="8" id="09M-Do-bOr"/>
+                            <constraint firstItem="RsR-Wb-zLG" firstAttribute="trailing" secondItem="gWd-wS-EYq" secondAttribute="trailing" id="2Sb-4W-zj0"/>
+                            <constraint firstItem="I01-7G-RLD" firstAttribute="top" secondItem="a1b-7h-PTg" secondAttribute="bottom" constant="8" id="4tF-gc-arL"/>
+                            <constraint firstItem="a1b-7h-PTg" firstAttribute="trailing" secondItem="RsR-Wb-zLG" secondAttribute="trailing" id="81O-wf-vBT"/>
+                            <constraint firstItem="gWd-wS-EYq" firstAttribute="top" secondItem="I01-7G-RLD" secondAttribute="bottom" constant="8" id="Gma-Rh-Q0Q"/>
+                            <constraint firstItem="gWd-wS-EYq" firstAttribute="leading" secondItem="RsR-Wb-zLG" secondAttribute="leading" id="LOx-sE-9eB"/>
+                            <constraint firstItem="a1b-7h-PTg" firstAttribute="leading" secondItem="RsR-Wb-zLG" secondAttribute="leading" id="N5U-rx-7pb"/>
+                            <constraint firstItem="a1b-7h-PTg" firstAttribute="top" secondItem="RsR-Wb-zLG" secondAttribute="top" id="ZHc-il-z0R"/>
+                            <constraint firstItem="RsR-Wb-zLG" firstAttribute="bottom" secondItem="gWd-wS-EYq" secondAttribute="bottom" id="cqE-ec-TFg"/>
+                            <constraint firstItem="I01-7G-RLD" firstAttribute="leading" secondItem="RsR-Wb-zLG" secondAttribute="leading" constant="8" id="jja-Kg-ypI"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="RsR-Wb-zLG"/>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="a1b-7h-PTg" id="YRF-aE-N2w"/>
+                        <outlet property="tableView" destination="gWd-wS-EYq" id="j4a-hh-vYE"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ama-h5-f0V" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-490.39999999999998" y="-188.45577211394306"/>
+        </scene>
+    </scenes>
+</document>
